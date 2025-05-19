@@ -1,21 +1,27 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-html,body,main{
+
+html,
+body,
+main {
     height: 100%;
     background-color: blue;
 }
-.grid-div{
+
+.grid-div {
     display: grid;
-    grid-template-columns: repeat(3,100px);
-    grid-template-rows: repeat(3,100px);
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
 }
-.grid-square{
+
+.grid-square {
     background-color: gray;
     border: 2px black solid;
     width: 100px;
     height: 100px;
+
 }
-.main-div{
+
+.main-div {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -23,11 +29,21 @@ html,body,main{
     align-items: center;
 }
 
-.roboto{
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.correct {
+    background-color: green;
+    transition: background-color 0.3s ease;
+}
+
+.incorrect {
+    background-color: red;
+    transition: background-color 0.3s ease;
 }
