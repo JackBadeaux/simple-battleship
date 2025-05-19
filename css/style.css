@@ -11,16 +11,22 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
+        border: 2px black solid;
 }
 
 .grid-square {
     background-color: gray;
-    border: 2px black solid;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
     width: 100px;
     height: 100px;
-
 }
-
+.grid-square:nth-child(3n) {
+  border-right: none;
+}
+.grid-square:nth-last-child(-n+3) {
+  border-bottom: none;
+}
 .main-div {
     height: 100%;
     display: flex;
@@ -44,6 +50,12 @@ main {
 }
 
 .incorrect {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.479);
     transition: background-color 0.3s ease;
+}
+.sunk{
+    content: url(/img/battship-sunk.png);
+}
+.miss{
+    content: url(/img/explosion.png);
 }
