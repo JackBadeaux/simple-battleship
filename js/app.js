@@ -25,7 +25,7 @@ squares.forEach((square, index) => {
         if (remainingBombs <= 0) {
             gameOver = true
             setTimeout(() => {
-                showCustomAlert("Game over out of bombs.","Press reset to play again.")
+                showCustomAlert("Game Over!","You ran out of bombs press reset to play again.")
         
             }, 100);
 
