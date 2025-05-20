@@ -3,7 +3,7 @@ const squares = document.querySelectorAll(".grid-square");
 const correctIndex = Math.floor(Math.random() * 9);
 const livesDisplay = document.getElementById("lives");
 let gameOver = false;
-let remainingBombs = 0;
+let remainingBombs = 3;
 //! game logic
 squares.forEach((square, index) => {
     square.addEventListener("click", function () {
