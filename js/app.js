@@ -13,8 +13,8 @@ squares.forEach((square, index) => {
             square.classList.add("correct", "sunk");
             gameOver = true;
             setTimeout(() => {
-                alert("Good Job! You have won")
-                location.reload();
+              showCustomAlert("You Won!","Press reset to play again.")
+         
             }, 100);
             return
         } else {
@@ -25,8 +25,8 @@ squares.forEach((square, index) => {
         if (remainingBombs <= 0) {
             gameOver = true
             setTimeout(() => {
-                alert("Game Over out of bombs")
-                location.reload();
+                showCustomAlert("Game over out of bombs.","Press reset to play again.")
+        
             }, 100);
 
         }
@@ -36,4 +36,20 @@ squares.forEach((square, index) => {
 document.getElementById("resetButton").addEventListener("click", function () {
     location.reload();
 })
+//! custom alert logic
+function showCustomAlert(title, text, onClose = null) {
+  const customAlert = document.getElementById("customAlert");
+  const customAlertTitle = document.getElementById("customAlertTitle");
+  const customAlertText = document.getElementById("customAlertText");
+  const closeBtn = document.getElementById("customAlertClose");
 
+  customAlertTitle.textContent = title;
+  customAlertText.textContent = text;
+
+  customAlert.classList.remove("hidden");
+
+  closeBtn.onclick = () => {
+    customAlert.classList.add("hidden");
+    if (onClose) onClose(); 
+  };
+}
