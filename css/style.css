@@ -81,3 +81,12 @@ main {
   border-radius: 10px;
   text-align: center;
 }
+#customAlertClose{
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 2px solid black;
+  font-size: 15px;
+  padding: 0;
+}
+#customAlertClose:hover{
+  font-size: 20px;
+}
